@@ -9,615 +9,490 @@
 <meta name="description" content="Produtos digitais para quem quer aprender, criar e editar melhor.">
 
 <style>
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080808;
-    color: #fff;
-    line-height: 1.6;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
 }
 
-.container {
-    width: min(1100px, 92%);
-    margin: auto;
+.container{
+    width:min(1100px,92%);
+    margin:auto;
 }
 
-/* HERO */
-
-.hero {
-    padding: 75px 0 65px;
-    text-align: center;
-    background: radial-gradient(
-        circle at top,
-        #241b46,
-        #080808 62%
-    );
+.hero{
+    padding:75px 0 65px;
+    text-align:center;
+    background:radial-gradient(circle at top,#241b46,#080808 62%);
 }
 
-.badge {
-    display: inline-block;
-    border: 1px solid #3a3155;
-    border-radius: 99px;
-    padding: 7px 14px;
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 18px;
+.badge{
+    display:inline-block;
+    border:1px solid #3a3155;
+    border-radius:99px;
+    padding:7px 14px;
+    color:#bbb;
+    font-size:13px;
+    margin-bottom:18px;
 }
 
-h1 {
-    font-size: clamp(40px, 7vw, 72px);
-    line-height: 1.02;
-    margin-bottom: 18px;
+h1{
+    font-size:clamp(40px,7vw,72px);
+    line-height:1.02;
+    margin-bottom:18px;
 }
 
-h1 span {
-    color: #7c5cff;
+h1 span{
+    color:#7c5cff;
 }
 
-.hero p {
-    color: #aaa;
-    max-width: 680px;
-    margin: auto;
-    font-size: 18px;
+.hero p{
+    color:#aaa;
+    max-width:680px;
+    margin:auto;
+    font-size:18px;
 }
 
-/* SEÇÕES */
-
-section {
-    padding: 65px 0;
+section{
+    padding:65px 0;
 }
 
-.title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 10px;
+.title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:10px;
 }
 
-.subtitle {
-    text-align: center;
-    color: #888;
-    margin-bottom: 35px;
+.subtitle{
+    text-align:center;
+    color:#888;
+    margin-bottom:35px;
 }
 
-/* PRODUTOS */
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.product {
-    background: #111;
-    border: 1px solid #242424;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: .2s;
+.product{
+    background:#111;
+    border:1px solid #242424;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.2s;
 }
 
-.product:hover {
-    transform: translateY(-4px);
-    border-color: #40356b;
+.product:hover{
+    transform:translateY(-4px);
+    border-color:#40356b;
 }
 
-/* CAPA DO PRODUTO */
-
-.cover {
-    width: 100%;
-    height: 190px;
-    background: linear-gradient(
-        135deg,
-        #21184a,
-        #101010
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.cover{
+    width:100%;
+    height:190px;
+    background:linear-gradient(135deg,#21184a,#101010);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
-.cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-/* INFORMAÇÕES */
-
-.info {
-    padding: 24px;
+.info{
+    padding:24px;
 }
 
-.info h3 {
-    font-size: 21px;
-    margin-bottom: 8px;
+.info h3{
+    font-size:21px;
+    margin-bottom:8px;
 }
 
-.info p {
-    color: #999;
-    font-size: 14px;
-    min-height: 65px;
+.info p{
+    color:#999;
+    font-size:14px;
+    min-height:65px;
 }
 
-/* PREÇO */
-
-.price {
-    font-size: 27px;
-    font-weight: 900;
-    margin: 16px 0;
+.price{
+    font-size:27px;
+    font-weight:900;
+    margin:16px 0;
 }
 
-.price small {
-    font-size: 13px;
-    color: #777;
-    font-weight: normal;
+.price small{
+    font-size:13px;
+    color:#777;
+    font-weight:normal;
 }
 
-/* BOTÃO */
-
-.btn {
-    display: block;
-    text-align: center;
-    background: #7c5cff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    padding: 13px 18px;
-    border-radius: 10px;
-    transition: .2s;
+.btn{
+    display:block;
+    text-align:center;
+    background:#7c5cff;
+    color:#fff;
+    text-decoration:none;
+    font-weight:800;
+    padding:13px 18px;
+    border-radius:10px;
 }
 
-.btn:hover {
-    filter: brightness(1.12);
+.btn:hover{
+    filter:brightness(1.12);
 }
 
-/* SOBRE */
-
-.about {
-    background: #0f0f0f;
-    border-top: 1px solid #1d1d1d;
-    border-bottom: 1px solid #1d1d1d;
+.about{
+    background:#0f0f0f;
+    border-top:1px solid #1d1d1d;
+    border-bottom:1px solid #1d1d1d;
 }
 
-/* FAQ */
-
-.faq {
-    max-width: 760px;
-    margin: auto;
+.faq{
+    max-width:760px;
+    margin:auto;
 }
 
-.faq div {
-    padding: 19px 0;
-    border-bottom: 1px solid #252525;
+.faq div{
+    padding:19px 0;
+    border-bottom:1px solid #252525;
 }
 
-.faq p {
-    color: #888;
+.faq p{
+    color:#888;
 }
 
-/* RODAPÉ */
-
-footer {
-    text-align: center;
-    color: #666;
-    font-size: 13px;
-    padding: 30px;
+footer{
+    text-align:center;
+    color:#666;
+    font-size:13px;
+    padding:30px;
 }
 
-/* RESPONSIVO */
+@media(max-width:800px){
+    .products{
+        grid-template-columns:1fr 1fr;
+    }
+}
 
-@media (max-width: 800px) {
-
-    .products {
-        grid-template-columns: 1fr 1fr;
+@media(max-width:560px){
+    .products{
+        grid-template-columns:1fr;
     }
 
-}
-
-@media (max-width: 560px) {
-
-    .products {
-        grid-template-columns: 1fr;
+    .hero{
+        padding-top:55px;
     }
-
-    .hero {
-        padding-top: 55px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- CABEÇALHO -->
-
 <header class="hero">
+<div class="container">
 
-    <div class="container">
+<div class="badge">
+PRODUTOS DIGITAIS
+</div>
 
-        <div class="badge">
-            PRODUTOS DIGITAIS
-        </div>
+<h1>
+Crie. Edite. <span>Evolua.</span>
+</h1>
 
-        <h1>
-            Crie. Edite. <span>Evolua.</span>
-        </h1>
+<p>
+Materiais digitais simples e práticos para ajudar você a aprender novas habilidades e melhorar seus projetos.
+</p>
 
-        <p>
-            Materiais digitais simples e práticos para ajudar você
-            a aprender novas habilidades e melhorar seus projetos.
-        </p>
-
-    </div>
-
+</div>
 </header>
 
 
-<!-- PRODUTOS -->
-
 <section>
+<div class="container">
 
-    <div class="container">
+<h2 class="title">
+Nossa loja
+</h2>
 
-        <h2 class="title">
-            Nossa loja
-        </h2>
+<p class="subtitle">
+Escolha o produto que combina com o que você quer aprender.
+</p>
 
-        <p class="subtitle">
-            Escolha o produto que combina com o que você quer aprender.
-        </p>
+<div class="products">
 
 
-        <div class="products">
+<!-- PRODUTO 1 -->
+<div class="product">
 
+<div class="cover">
+</div>
 
-            <!-- PRODUTO 1 -->
+<div class="info">
 
-            <div class="product">
+<h3>
+Edição Mobile do Zero
+</h3>
 
-                <div class="cover">
+<p>
+Guia completo para começar a editar vídeos pelo celular, com linguagem simples e exercícios.
+</p>
 
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Edicao+Mobile+do+Zero"
-                        alt="Edição Mobile do Zero"
-                    >
+<div class="price">
+R$ 19,90 <small>pagamento único</small>
+</div>
 
-                </div>
+<a class="btn" href="https://pay.kiwify.com.br/ZIFLRiH">
+QUERO COMPRAR
+</a>
 
-                <div class="info">
+</div>
+</div>
 
-                    <h3>
-                        Edição Mobile do Zero
-                    </h3>
 
-                    <p>
-                        Guia completo para começar a editar vídeos pelo celular,
-                        com linguagem simples e exercícios.
-                    </p>
+<!-- PRODUTO 2 -->
+<div class="product">
 
-                    <div class="price">
-                        R$ 19,90
-                        <small>pagamento único</small>
-                    </div>
+<div class="cover">
 
-                    <a
-                        class="btn"
-                        href="https://pay.kiwify.com.br/ZIFLRiH"
-                    >
-                        QUERO COMPRAR
-                    </a>
+<img
+src="Alight-Motion-App-Icon-Motion-Graphics-Editing-Logo.jpg"
+alt="Presets Alight Motion"
+>
 
-                </div>
+</div>
 
-            </div>
+<div class="info">
 
+<h3>
+Presets Alight Motion
+</h3>
 
-            <!-- PRODUTO 2 -->
+<p>
+Presets e recursos para deixar suas edições mais rápidas e personalizadas.
+</p>
 
-            <div class="product">
+<div class="price">
+R$ 9,90 <small>pagamento único</small>
+</div>
 
-                <div class="cover">
+<a class="btn" href="https://pay.kiwify.com.br/b07VHJ8">
+QUERO COMPRAR
+</a>
 
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Presets+Alight+Motion"
-                        alt="Presets Alight Motion"
-                    >
+</div>
+</div>
 
-                </div>
 
-                <div class="info">
+<!-- PRODUTO 3 -->
+<div class="product">
 
-                    <h3>
-                        Presets Alight Motion
-                    </h3>
+<div class="cover">
+</div>
 
-                    <p>
-                        Presets e recursos para deixar suas edições
-                        mais rápidas e personalizadas.
-                    </p>
+<div class="info">
 
-                    <div class="price">
-                        R$ 9,90
-                        <small>pagamento único</small>
-                    </div>
+<h3>
+Edição Avançada
+</h3>
 
-                    <a
-                        class="btn"
-                        href="https://pay.kiwify.com.br/b07VHJ8"
-                    >
-                        QUERO COMPRAR
-                    </a>
+<p>
+Material para quem já sabe o básico e quer aprender técnicas mais avançadas.
+</p>
 
-                </div>
+<div class="price">
+R$ 39,90 <small>pagamento único</small>
+</div>
 
-            </div>
+<a class="btn" href="https://pay.kiwify.com.br/kAajOBD">
+QUERO COMPRAR
+</a>
 
+</div>
+</div>
 
-            <!-- PRODUTO 3 -->
 
-            <div class="product">
+<!-- PRODUTO 4 -->
+<div class="product">
 
-                <div class="cover">
+<div class="cover">
 
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Edicao+Avancada"
-                        alt="Edição Avançada"
-                    >
+<img
+src="logo vegas pro.jpg"
+alt="Presets VEGAS Pro"
+>
 
-                </div>
+</div>
 
-                <div class="info">
+<div class="info">
 
-                    <h3>
-                        Edição Avançada
-                    </h3>
+<h3>
+Presets VEGAS Pro
+</h3>
 
-                    <p>
-                        Material para quem já sabe o básico e quer
-                        aprender técnicas mais avançadas.
-                    </p>
+<p>
+Uma coleção de recursos digitais para facilitar seu fluxo de edição.
+</p>
 
-                    <div class="price">
-                        R$ 39,90
-                        <small>pagamento único</small>
-                    </div>
+<div class="price">
+R$ 14,90 <small>pagamento único</small>
+</div>
 
-                    <a
-                        class="btn"
-                        href="https://pay.kiwify.com.br/kAajOBD"
-                    >
-                        QUERO COMPRAR
-                    </a>
+<a class="btn" href="https://pay.kiwify.com.br/GIoEdd6">
+QUERO COMPRAR
+</a>
 
-                </div>
+</div>
+</div>
 
-            </div>
 
+<!-- PRODUTO 5 -->
+<div class="product">
 
-            <!-- PRODUTO 4 -->
+<div class="cover">
 
-            <div class="product">
+<img
+src="adobe-after-effects.jpg"
+alt="Presets After Effects"
+>
 
-                <div class="cover">
+</div>
 
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Presets+VEGAS+Pro"
-                        alt="Presets VEGAS Pro"
-                    >
+<div class="info">
 
-                </div>
+<h3>
+Presets After Effects
+</h3>
 
-                <div class="info">
+<p>
+Leve suas edições no After Effects para outro nível com presets prontos para usar.
+</p>
 
-                    <h3>
-                        Presets VEGAS Pro
-                    </h3>
+<div class="price">
+R$ 14,90 <small>pagamento único</small>
+</div>
 
-                    <p>
-                        Uma coleção de recursos digitais para facilitar
-                        seu fluxo de edição.
-                    </p>
+<a class="btn" href="https://pay.kiwify.com.br/QF1Reuz">
+QUERO COMPRAR
+</a>
 
-                    <div class="price">
-                        R$ 14,90
-                        <small>pagamento único</small>
-                    </div>
+</div>
+</div>
 
-                    <a
-                        class="btn"
-                        href="https://pay.kiwify.com.br/GIoEdd6"
-                    >
-                        QUERO COMPRAR
-                    </a>
 
-                </div>
+<!-- PRODUTO 6 -->
+<div class="product">
 
-            </div>
+<div class="cover">
+</div>
 
+<div class="info">
 
-            <!-- PRODUTO 5 -->
+<h3>
+Produto Digital 6
+</h3>
 
-            <div class="product">
+<p>
+Mais um espaço pronto para adicionar um novo produto da Kiwify.
+</p>
 
-                <div class="cover">
+<div class="price">
+R$ 00,00 <small>pagamento único</small>
+</div>
 
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Presets+After+Effects"
-                        alt="Presets After Effects"
-                    >
+<a class="btn" href="SEU_LINK_KIWIFY_6">
+QUERO COMPRAR
+</a>
 
-                </div>
+</div>
+</div>
 
-                <div class="info">
 
-                    <h3>
-                        Presets After Effects
-                    </h3>
-
-                    <p>
-                        Leve suas edições no After Effects para outro
-                        nível com presets prontos para usar.
-                    </p>
-
-                    <div class="price">
-                        R$ 14,90
-                        <small>pagamento único</small>
-                    </div>
-
-                    <a
-                        class="btn"
-                        href="https://pay.kiwify.com.br/QF1Reuz"
-                    >
-                        QUERO COMPRAR
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUTO 6 -->
-
-            <div class="product">
-
-                <div class="cover">
-
-                    <img
-                        src="https://placehold.co/800x500/21184a/ffffff?text=Produto+Digital+6"
-                        alt="Produto Digital 6"
-                    >
-
-                </div>
-
-                <div class="info">
-
-                    <h3>
-                        Produto Digital 6
-                    </h3>
-
-                    <p>
-                        Mais um espaço pronto para adicionar um novo
-                        produto da Kiwify.
-                    </p>
-
-                    <div class="price">
-                        R$ 00,00
-                        <small>pagamento único</small>
-                    </div>
-
-                    <a
-                        class="btn"
-                        href="SEU_LINK_KIWIFY_6"
-                    >
-                        QUERO COMPRAR
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
-
-<!-- SOBRE -->
 
 <section class="about">
 
-    <div class="container">
+<div class="container">
 
-        <h2 class="title">
-            Tudo em um só lugar
-        </h2>
+<h2 class="title">
+Tudo em um só lugar
+</h2>
 
-        <p class="subtitle">
-            Acesse materiais digitais feitos para quem quer aprender
-            de forma prática, sem enrolação.
-        </p>
+<p class="subtitle">
+Acesse materiais digitais feitos para quem quer aprender de forma prática, sem enrolação.
+</p>
 
-    </div>
+</div>
 
 </section>
 
-
-<!-- FAQ -->
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <h2 class="title">
-            Dúvidas frequentes
-        </h2>
+<h2 class="title">
+Dúvidas frequentes
+</h2>
 
-        <div class="faq">
+<div class="faq">
 
-            <div>
+<div>
+<h3>
+Como recebo o produto?
+</h3>
 
-                <h3>
-                    Como recebo o produto?
-                </h3>
-
-                <p>
-                    Depois da confirmação do pagamento, a Kiwify libera
-                    o acesso conforme a configuração do produto.
-                </p>
-
-            </div>
+<p>
+Depois da confirmação do pagamento, a Kiwify libera o acesso conforme a configuração do produto.
+</p>
+</div>
 
 
-            <div>
+<div>
+<h3>
+Posso comprar mais de um produto?
+</h3>
 
-                <h3>
-                    Posso comprar mais de um produto?
-                </h3>
-
-                <p>
-                    Sim. Cada produto possui seu próprio botão e checkout.
-                </p>
-
-            </div>
+<p>
+Sim. Cada produto possui seu próprio botão e checkout.
+</p>
+</div>
 
 
-            <div>
+<div>
+<h3>
+Os pagamentos são pela Kiwify?
+</h3>
 
-                <h3>
-                    Os pagamentos são pela Kiwify?
-                </h3>
+<p>
+Sim. Os botões da loja podem levar diretamente para os respectivos checkouts da Kiwify.
+</p>
+</div>
 
-                <p>
-                    Sim. Os botões da loja podem levar diretamente
-                    para os respectivos checkouts da Kiwify.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
+</div>
 
 </section>
 
 
-<!-- RODAPÉ -->
-
 <footer>
-    © 2026 Wesley Store · Todos os direitos reservados.
+© 2026 Wesley Store · Todos os direitos reservados.
 </footer>
-
 
 </body>
 </html>
