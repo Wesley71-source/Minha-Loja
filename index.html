@@ -7,6 +7,7 @@
     <title>Wesley Edit Store</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -73,8 +74,13 @@
             align-items: center;
             text-align: center;
             padding: 70px 20px;
+
             background:
-                radial-gradient(circle at center, #17112b 0%, #080808 55%);
+                radial-gradient(
+                    circle at center,
+                    #17112b 0%,
+                    #080808 55%
+                );
         }
 
         .hero-content {
@@ -159,42 +165,39 @@
         .product:hover {
             transform: translateY(-5px);
             border-color: #7c5cff;
-            box-shadow: 0 10px 35px rgba(124, 92, 255, 0.12);
+            box-shadow:
+                0 10px 35px rgba(124, 92, 255, 0.12);
         }
 
-        /* ÁREA DAS IMAGENS */
+        /* =========================
+           IMAGENS
+        ========================= */
 
         .cover {
             width: 100%;
             height: 210px;
             background: #181818;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             overflow: hidden;
         }
 
         .cover img {
             width: 100%;
             height: 100%;
+
             object-fit: contain !important;
             object-position: center;
+
             display: block;
         }
 
-        /* Ajuste específico do Alight Motion */
-
-        .alight-cover {
-            background: #181818;
-        }
-
-        .alight-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain !important;
-            object-position: center;
-            display: block;
-        }
+        /* =========================
+           CONTEÚDO DO PRODUTO
+        ========================= */
 
         .product-content {
             padding: 22px;
@@ -223,17 +226,37 @@
             display: block;
             width: 100%;
             padding: 13px;
+
             text-align: center;
+
             background: #7c5cff;
             color: white;
+
             text-decoration: none;
+
             border-radius: 9px;
+
             font-weight: bold;
+
             transition: 0.2s;
         }
 
         .buy-button:hover {
             background: #6848ff;
+        }
+
+        /* =========================
+           BOTÃO EM BREVE
+        ========================= */
+
+        .coming-soon {
+            background: #252525;
+            color: #777;
+            cursor: default;
+        }
+
+        .coming-soon:hover {
+            background: #252525;
         }
 
         /* =========================
@@ -270,6 +293,7 @@
             background: #111;
             border: 1px solid #222;
             border-radius: 10px;
+
             padding: 20px;
             margin-bottom: 15px;
         }
@@ -292,8 +316,11 @@
         footer {
             text-align: center;
             padding: 35px 20px;
+
             border-top: 1px solid #1c1c1c;
+
             color: #666;
+
             font-size: 14px;
         }
 
@@ -302,7 +329,7 @@
         }
 
         /* =========================
-           CELULAR
+           TABLET
         ========================= */
 
         @media (max-width: 800px) {
@@ -324,6 +351,10 @@
                 padding: 55px 5%;
             }
         }
+
+        /* =========================
+           CELULAR
+        ========================= */
 
         @media (max-width: 560px) {
 
@@ -352,14 +383,17 @@
                 height: 220px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          HEADER
-    ========================== -->
+    ========================= -->
 
     <header>
 
@@ -378,7 +412,7 @@
 
     <!-- =========================
          HERO
-    ========================== -->
+    ========================= -->
 
     <section class="hero">
 
@@ -389,8 +423,9 @@
             </h1>
 
             <p>
-                Produtos digitais para quem quer aprender edição,
-                melhorar seus vídeos e evoluir seus projetos.
+                Produtos digitais para quem quer aprender
+                edição, melhorar seus vídeos e evoluir
+                seus projetos.
             </p>
 
             <a href="#produtos" class="hero-button">
@@ -404,7 +439,7 @@
 
     <!-- =========================
          PRODUTOS
-    ========================== -->
+    ========================= -->
 
     <section id="produtos">
 
@@ -413,7 +448,7 @@
             <h2>Meus produtos</h2>
 
             <p>
-                Escolha o material que combina com você.
+                Cursos, guias e materiais para edição.
             </p>
 
         </div>
@@ -422,17 +457,23 @@
         <div class="products">
 
 
-            <!-- PRODUTO 1 -->
+            <!-- =========================
+                 PRODUTO 1
+            ========================= -->
 
             <div class="product">
 
                 <div class="cover">
-                    <div style="font-size: 45px;">🎬</div>
+                    <div style="font-size:45px;">
+                        🎬
+                    </div>
                 </div>
 
                 <div class="product-content">
 
-                    <h3>Edição Mobile do Zero</h3>
+                    <h3>
+                        Edição Mobile do Zero
+                    </h3>
 
                     <p>
                         Aprenda a começar a editar vídeos
@@ -456,11 +497,13 @@
             </div>
 
 
-            <!-- PRODUTO 2 -->
+            <!-- =========================
+                 PRODUTO 2
+            ========================= -->
 
             <div class="product">
 
-                <div class="cover alight-cover">
+                <div class="cover">
 
                     <img
                         src="AlightMotion.jpg"
@@ -471,7 +514,9 @@
 
                 <div class="product-content">
 
-                    <h3>Presets Alight Motion</h3>
+                    <h3>
+                        Presets Alight Motion
+                    </h3>
 
                     <p>
                         Presets para facilitar e acelerar
@@ -495,17 +540,23 @@
             </div>
 
 
-            <!-- PRODUTO 3 -->
+            <!-- =========================
+                 PRODUTO 3
+            ========================= -->
 
             <div class="product">
 
                 <div class="cover">
-                    <div style="font-size: 45px;">⚡</div>
+                    <div style="font-size:45px;">
+                        ⚡
+                    </div>
                 </div>
 
                 <div class="product-content">
 
-                    <h3>Edição Avançada</h3>
+                    <h3>
+                        Edição Avançada
+                    </h3>
 
                     <p>
                         Conteúdo para quem já edita e quer
@@ -529,7 +580,9 @@
             </div>
 
 
-            <!-- PRODUTO 4 -->
+            <!-- =========================
+                 PRODUTO 4
+            ========================= -->
 
             <div class="product">
 
@@ -544,7 +597,9 @@
 
                 <div class="product-content">
 
-                    <h3>Presets VEGAS Pro</h3>
+                    <h3>
+                        Presets VEGAS Pro
+                    </h3>
 
                     <p>
                         Presets para deixar suas edições
@@ -568,7 +623,9 @@
             </div>
 
 
-            <!-- PRODUTO 5 -->
+            <!-- =========================
+                 PRODUTO 5
+            ========================= -->
 
             <div class="product">
 
@@ -583,11 +640,13 @@
 
                 <div class="product-content">
 
-                    <h3>Presets After Effects</h3>
+                    <h3>
+                        Presets After Effects
+                    </h3>
 
                     <p>
-                        Presets para agilizar seu fluxo de
-                        edição no After Effects.
+                        Presets para agilizar seu fluxo
+                        de edição no After Effects.
                     </p>
 
                     <div class="price">
@@ -607,21 +666,30 @@
             </div>
 
 
-            <!-- PRODUTO 6 -->
+            <!-- =========================
+                 PRODUTO 6
+            ========================= -->
 
             <div class="product">
 
                 <div class="cover">
-                    <div style="font-size: 45px;">📦</div>
+
+                    <img
+                        src="Vegas.jpg"
+                        alt="VEGAS Pro Básico"
+                    >
+
                 </div>
 
                 <div class="product-content">
 
-                    <h3>Em breve</h3>
+                    <h3>
+                        VEGAS Pro Básico
+                    </h3>
 
                     <p>
-                        Um novo produto digital está
-                        chegando.
+                        Aprenda os fundamentos do VEGAS Pro
+                        e comece a editar do zero.
                     </p>
 
                     <div class="price">
@@ -630,7 +698,258 @@
 
                     <a
                         href="#"
-                        class="buy-button"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 7
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <img
+                        src="Vegas.jpg"
+                        alt="VEGAS Pro Avançado"
+                    >
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        VEGAS Pro Avançado
+                    </h3>
+
+                    <p>
+                        Técnicas avançadas para evoluir
+                        suas edições no VEGAS Pro.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 8
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <img
+                        src="AfterEffects.jpg"
+                        alt="After Effects Básico"
+                    >
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        After Effects Básico
+                    </h3>
+
+                    <p>
+                        Comece no After Effects aprendendo
+                        suas principais ferramentas.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 9
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <img
+                        src="AfterEffects.jpg"
+                        alt="After Effects Avançado"
+                    >
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        After Effects Avançado
+                    </h3>
+
+                    <p>
+                        Técnicas avançadas, efeitos e
+                        recursos para edições mais completas.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 10
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <img
+                        src="AlightMotion.jpg"
+                        alt="Alight Motion Básico"
+                    >
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Alight Motion Básico
+                    </h3>
+
+                    <p>
+                        Aprenda as principais ferramentas
+                        do Alight Motion desde o início.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 11
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <img
+                        src="AlightMotion.jpg"
+                        alt="Alight Motion Avançado"
+                    >
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Alight Motion Avançado
+                    </h3>
+
+                    <p>
+                        Técnicas avançadas para criar
+                        edições mais completas.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
+                    >
+                        Em breve
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PRODUTO 12
+            ========================= -->
+
+            <div class="product">
+
+                <div class="cover">
+
+                    <div style="font-size:45px;">
+                        📚
+                    </div>
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Guia de Edição Profissional
+                    </h3>
+
+                    <p>
+                        Guia com técnicas e conceitos
+                        para melhorar suas edições.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a
+                        href="#"
+                        class="buy-button coming-soon"
                     >
                         Em breve
                     </a>
@@ -647,7 +966,7 @@
 
     <!-- =========================
          SOBRE
-    ========================== -->
+    ========================= -->
 
     <section id="sobre">
 
@@ -672,13 +991,15 @@
 
     <!-- =========================
          FAQ
-    ========================== -->
+    ========================= -->
 
     <section id="faq">
 
         <div class="section-title">
 
-            <h2>Perguntas frequentes</h2>
+            <h2>
+                Perguntas frequentes
+            </h2>
 
             <p>
                 Algumas dúvidas comuns.
@@ -740,7 +1061,7 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
