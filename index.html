@@ -4,53 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wesley Edit Store</title>
+    <title>WesleyEdit | Produtos Digitais</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: white;
+            background: #0b0b0f;
+            color: #ffffff;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
+        /* HEADER */
         header {
             width: 100%;
             padding: 20px 7%;
+            background: #0f0f14;
+            border-bottom: 1px solid #202028;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            background: #080808;
-            border-bottom: 1px solid #1c1c1c;
-
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 25px;
             font-weight: bold;
-            color: white;
         }
 
         .logo span {
-            color: #7c5cff;
+            color: #7c3cff;
         }
 
         nav a {
@@ -58,180 +45,97 @@
             text-decoration: none;
             margin-left: 25px;
             font-size: 14px;
-            transition: 0.2s;
         }
 
         nav a:hover {
             color: white;
         }
 
-        /* =========================
-           HERO
-        ========================= */
-
+        /* HERO */
         .hero {
-            min-height: 430px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             text-align: center;
-
-            padding: 70px 20px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    #17112b 0%,
-                    #080808 55%
-                );
-        }
-
-        .hero-content {
-            max-width: 800px;
+            padding: 80px 20px 70px;
+            background: radial-gradient(circle at center, #1a1230 0%, #0b0b0f 60%);
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 78px);
-            line-height: 1;
-            margin-bottom: 20px;
+            font-size: 48px;
+            margin-bottom: 15px;
         }
 
         .hero h1 span {
-            color: #7c5cff;
+            color: #8b5cf6;
         }
 
         .hero p {
             color: #aaa;
-            font-size: 18px;
+            font-size: 17px;
+            max-width: 650px;
+            margin: auto;
             line-height: 1.6;
-            margin-bottom: 30px;
         }
 
-        .hero-button {
-            display: inline-block;
-
-            padding: 14px 28px;
-
-            background: #7c5cff;
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 10px;
-
-            font-weight: bold;
-
-            transition: 0.2s;
+        /* PRODUTOS */
+        .products-section {
+            width: 86%;
+            max-width: 1250px;
+            margin: auto;
+            padding-bottom: 70px;
         }
-
-        .hero-button:hover {
-            transform: translateY(-2px);
-            background: #6848ff;
-        }
-
-        /* =========================
-           SEÇÕES
-        ========================= */
-
-        section {
-            padding: 70px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #888;
-        }
-
-        /* =========================
-           CATEGORIAS
-        ========================= */
 
         .category {
-            max-width: 1200px;
-            margin: 0 auto 65px;
+            margin-bottom: 70px;
         }
 
         .category-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
 
+        .category-subtitle {
+            color: #777;
             margin-bottom: 25px;
+            font-size: 14px;
         }
 
-        .category-title h3 {
-            font-size: 25px;
+        .category-line {
+            width: 55px;
+            height: 4px;
+            background: #7c3cff;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
-
-        .category-title-line {
-            height: 1px;
-            background: #292929;
-            flex: 1;
-        }
-
-        /* =========================
-           GRID DOS PRODUTOS
-        ========================= */
 
         .products {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        /* =========================
-           CARD
-        ========================= */
-
-        .product {
-            background: #111;
-
-            border: 1px solid #222;
-
+        /* CARD */
+        .card {
+            background: #121219;
+            border: 1px solid #24242e;
             border-radius: 15px;
-
             overflow: hidden;
 
-            transition: 0.25s;
+            transition: 0.25s ease;
         }
 
-        .product:hover {
-            transform: translateY(-5px);
-
-            border-color: #7c5cff;
-
-            box-shadow:
-                0 10px 35px
-                rgba(124, 92, 255, 0.12);
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #7c3cff;
+            box-shadow: 0 10px 35px rgba(124, 60, 255, 0.12);
         }
-
-        /* =========================
-           IMAGEM
-        ========================= */
 
         .cover {
             width: 100%;
             height: 210px;
-
-            background: #181818;
+            background: #18181f;
 
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
 
             overflow: hidden;
         }
@@ -239,1001 +143,688 @@
         .cover img {
             width: 100%;
             height: 100%;
-
-            object-fit: contain !important;
-
-            object-position: center;
-
-            display: block;
+            object-fit: contain;
         }
 
-        /* =========================
-           CONTEÚDO
-        ========================= */
-
-        .product-content {
+        .card-content {
             padding: 22px;
         }
 
-        .product h4 {
-            font-size: 20px;
+        .card-content h3 {
+            font-size: 19px;
             margin-bottom: 10px;
         }
 
-        .product p {
+        .card-content p {
             color: #888;
-
             font-size: 14px;
-
             line-height: 1.5;
-
-            min-height: 42px;
+            min-height: 43px;
         }
 
         .price {
-            font-size: 23px;
-
+            font-size: 22px;
             font-weight: bold;
-
-            color: #7c5cff;
-
-            margin: 18px 0;
+            margin: 20px 0;
         }
 
-        /* =========================
-           BOTÃO
-        ========================= */
-
-        .buy-button {
+        .button {
             display: block;
-
             width: 100%;
-
             padding: 13px;
-
-            text-align: center;
-
-            background: #7c5cff;
-
-            color: white;
-
-            text-decoration: none;
-
             border-radius: 9px;
 
+            text-align: center;
+            text-decoration: none;
+
+            background: #7c3cff;
+            color: white;
             font-weight: bold;
 
             transition: 0.2s;
         }
 
-        .buy-button:hover {
-            background: #6848ff;
+        .button:hover {
+            background: #925cff;
         }
 
-        /* =========================
-           EM BREVE
-        ========================= */
-
-        .coming-soon {
-            background: #252525;
+        .button.disabled {
+            background: #292933;
             color: #777;
+            cursor: default;
         }
 
-        .coming-soon:hover {
-            background: #252525;
-        }
-
-        /* =========================
-           SOBRE
-        ========================= */
-
+        /* SOBRE */
         .about {
-            max-width: 900px;
-
-            margin: auto;
-
+            width: 86%;
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 35px;
+            background: #121219;
+            border: 1px solid #24242e;
+            border-radius: 15px;
             text-align: center;
         }
 
         .about h2 {
-            font-size: 35px;
-
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .about p {
             color: #999;
-
-            font-size: 17px;
-
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
-        /* =========================
-           FAQ
-        ========================= */
-
+        /* FAQ */
         .faq {
-            max-width: 800px;
-
+            width: 86%;
+            max-width: 900px;
             margin: auto;
+            padding-bottom: 80px;
         }
 
-        .faq-item {
-            background: #111;
-
-            border: 1px solid #222;
-
-            border-radius: 10px;
-
-            padding: 20px;
-
-            margin-bottom: 15px;
-        }
-
-        .faq-item h3 {
-            font-size: 17px;
-
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: #888;
-
-            line-height: 1.6;
-
-            font-size: 14px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
+        .faq h2 {
             text-align: center;
+            margin-bottom: 30px;
+        }
 
-            padding: 35px 20px;
+        details {
+            background: #121219;
+            border: 1px solid #24242e;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            padding: 18px;
+        }
 
-            border-top: 1px solid #1c1c1c;
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
 
+        details p {
+            color: #999;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f0f14;
+            border-top: 1px solid #202028;
+            text-align: center;
+            padding: 30px;
             color: #666;
-
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        footer span {
-            color: #7c5cff;
-        }
-
-        /* =========================
-           TABLET
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            header {
-                padding: 18px 5%;
-            }
-
-            nav a {
-                margin-left: 12px;
-                font-size: 13px;
-            }
-
+        /* RESPONSIVO */
+        @media (max-width: 850px) {
             .products {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            section {
-                padding: 55px 5%;
+            .hero h1 {
+                font-size: 38px;
             }
         }
 
-        /* =========================
-           CELULAR
-        ========================= */
-
-        @media (max-width: 560px) {
-
+        @media (max-width: 580px) {
             header {
-                flex-direction: column;
-
-                gap: 12px;
+                padding: 18px 5%;
             }
 
-            nav a {
-                margin: 0 7px;
-            }
-
-            .hero {
-                min-height: 400px;
-            }
-
-            .hero p {
-                font-size: 16px;
+            nav {
+                display: none;
             }
 
             .products {
                 grid-template-columns: 1fr;
             }
 
-            .cover {
-                height: 220px;
+            .products-section,
+            .about,
+            .faq {
+                width: 90%;
             }
 
-            .category-title h3 {
-                font-size: 22px;
+            .hero {
+                padding: 60px 20px;
             }
 
+            .hero h1 {
+                font-size: 32px;
+            }
         }
-
     </style>
 </head>
 
-
 <body>
 
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        Wesley<span>Edit</span>
+    </div>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
-
-    <header>
-
-        <div class="logo">
-            Wesley<span>Edit</span>
-        </div>
-
-        <nav>
-            <a href="#produtos">Produtos</a>
-
-            <a href="#sobre">Sobre</a>
-
-            <a href="#faq">FAQ</a>
-        </nav>
-
-    </header>
+    <nav>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+</header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+<!-- HERO -->
+<section class="hero">
+    <h1>Crie. <span>Edite.</span> Evolua.</h1>
 
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <h1>
-                Crie. <span>Edite.</span> Evolua.
-            </h1>
-
-            <p>
-                Produtos digitais para quem quer aprender
-                edição, melhorar seus vídeos e evoluir
-                seus projetos.
-            </p>
-
-            <a
-                href="#produtos"
-                class="hero-button"
-            >
-                Ver produtos
-            </a>
-
-        </div>
-
-    </section>
+    <p>
+        Guias, presets e materiais para quem quer aprender edição
+        e melhorar seus vídeos de forma simples e profissional.
+    </p>
+</section>
 
 
-    <!-- =========================
-         PRODUTOS
-    ========================= -->
-
-    <section id="produtos">
-
-        <div class="section-title">
-
-            <h2>
-                Meus produtos
-            </h2>
-
-            <p>
-                Cursos, guias e materiais para edição.
-            </p>
-
-        </div>
+<!-- PRODUTOS -->
+<section class="products-section" id="produtos">
 
 
-        <!-- =========================================
-             PRODUTOS GERAIS
-        ========================================== -->
+    <!-- ========================================= -->
+    <!-- 1. SOBRE EDIÇÃO -->
+    <!-- ========================================= -->
 
-        <div class="category">
+    <div class="category">
 
-            <div class="category-title">
+        <h2 class="category-title">Sobre Edição</h2>
 
-                <h3>
-                    Produtos Gerais
-                </h3>
+        <p class="category-subtitle">
+            Guias para aprender edição do zero e evoluir suas habilidades.
+        </p>
 
-                <div class="category-title-line"></div>
+        <div class="category-line"></div>
 
+        <div class="products">
+
+
+            <!-- EDIÇÃO MOBILE DO ZERO -->
+            <div class="card">
+
+                <div class="cover">
+                    <div style="font-size: 55px;">🎬</div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Edição Mobile do Zero</h3>
+
+                    <p>
+                        Aprenda a começar a editar vídeos pelo celular,
+                        mesmo sem experiência.
+                    </p>
+
+                    <div class="price">
+                        R$ 19,90
+                    </div>
+
+                    <a
+                        href="https://pay.kiwify.com.br/ZIFLRiH"
+                        target="_blank"
+                        class="button">
+                        Comprar agora
+                    </a>
+
+                </div>
             </div>
 
 
-            <div class="products">
+            <!-- GUIA BÁSICO -->
+            <div class="card">
 
-
-                <!-- EDIÇÃO MOBILE -->
-
-                <div class="product">
-
-                    <div class="cover">
-
-                        <div style="font-size:45px;">
-                            🎬
-                        </div>
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Edição Mobile do Zero
-                        </h4>
-
-                        <p>
-                            Aprenda a começar a editar vídeos
-                            diretamente pelo celular.
-                        </p>
-
-                        <div class="price">
-                            R$ 19,90
-                        </div>
-
-                        <a
-                            href="https://pay.kiwify.com.br/ZIFLRiH"
-                            target="_blank"
-                            class="buy-button"
-                        >
-                            Comprar agora
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <div style="font-size: 55px;">📘</div>
                 </div>
 
+                <div class="card-content">
 
-                <!-- EDIÇÃO AVANÇADA -->
+                    <h3>Guia Básico de Edição</h3>
 
-                <div class="product">
+                    <p>
+                        Aprenda os principais conceitos da edição
+                        de vídeos de forma simples.
+                    </p>
 
-                    <div class="cover">
-
-                        <div style="font-size:45px;">
-                            ⚡
-                        </div>
-
+                    <div class="price">
+                        Em breve
                     </div>
 
-                    <div class="product-content">
-
-                        <h4>
-                            Edição Avançada
-                        </h4>
-
-                        <p>
-                            Conteúdo para quem já edita
-                            e quer evoluir suas habilidades.
-                        </p>
-
-                        <div class="price">
-                            R$ 39,90
-                        </div>
-
-                        <a
-                            href="https://pay.kiwify.com.br/kAajOBD"
-                            target="_blank"
-                            class="buy-button"
-                        >
-                            Comprar agora
-                        </a>
-
-                    </div>
+                    <a class="button disabled">
+                        Em breve
+                    </a>
 
                 </div>
+            </div>
 
 
-                <!-- GUIA PROFISSIONAL -->
+            <!-- GUIA PROFISSIONAL -->
+            <div class="card">
 
-                <div class="product">
-
-                    <div class="cover">
-
-                        <div style="font-size:45px;">
-                            📚
-                        </div>
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Guia de Edição Profissional
-                        </h4>
-
-                        <p>
-                            Guia com técnicas e conceitos
-                            para melhorar suas edições.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <div style="font-size: 55px;">🎓</div>
                 </div>
 
+                <div class="card-content">
 
+                    <h3>Guia Profissional de Edição</h3>
+
+                    <p>
+                        Conteúdo avançado para melhorar técnicas,
+                        ritmo, efeitos e acabamento dos vídeos.
+                    </p>
+
+                    <div class="price">
+                        R$ 39,90
+                    </div>
+
+                    <a
+                        href="https://pay.kiwify.com.br/kAajOBD"
+                        target="_blank"
+                        class="button">
+                        Comprar agora
+                    </a>
+
+                </div>
             </div>
 
         </div>
+    </div>
 
 
-        <!-- =========================================
-             VEGAS PRO
-        ========================================== -->
 
-        <div class="category">
+    <!-- ========================================= -->
+    <!-- 2. AFTER EFFECTS -->
+    <!-- ========================================= -->
 
-            <div class="category-title">
+    <div class="category">
 
-                <h3>
-                    VEGAS Pro
-                </h3>
+        <h2 class="category-title">After Effects</h2>
 
-                <div class="category-title-line"></div>
+        <p class="category-subtitle">
+            Materiais, presets e conteúdos para Adobe After Effects.
+        </p>
 
+        <div class="category-line"></div>
+
+        <div class="products">
+
+
+            <!-- AFTER BÁSICO -->
+            <div class="card">
+
+                <div class="cover">
+                    <img src="AfterEffects.jpg" alt="After Effects">
+                </div>
+
+                <div class="card-content">
+
+                    <h3>After Effects Básico</h3>
+
+                    <p>
+                        Comece a aprender After Effects
+                        e conheça as principais ferramentas.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a class="button disabled">
+                        Em breve
+                    </a>
+
+                </div>
             </div>
 
 
-            <div class="products">
+            <!-- PRESETS AFTER -->
+            <div class="card">
 
-
-                <!-- PRESETS VEGAS -->
-
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="Vegas.jpg"
-                            alt="Presets VEGAS Pro"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Presets VEGAS Pro
-                        </h4>
-
-                        <p>
-                            Presets para deixar suas edições
-                            mais práticas e profissionais.
-                        </p>
-
-                        <div class="price">
-                            R$ 14,90
-                        </div>
-
-                        <a
-                            href="https://pay.kiwify.com.br/GIoEdd6"
-                            target="_blank"
-                            class="buy-button"
-                        >
-                            Comprar agora
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="AfterEffects.jpg" alt="After Effects">
                 </div>
 
+                <div class="card-content">
 
-                <!-- VEGAS BÁSICO -->
+                    <h3>Presets After Effects</h3>
 
-                <div class="product">
+                    <p>
+                        Presets para agilizar seus projetos
+                        e deixar suas edições mais completas.
+                    </p>
 
-                    <div class="cover">
-
-                        <img
-                            src="Vegas.jpg"
-                            alt="VEGAS Pro Básico"
-                        >
-
+                    <div class="price">
+                        R$ 14,90
                     </div>
 
-                    <div class="product-content">
-
-                        <h4>
-                            VEGAS Pro Básico
-                        </h4>
-
-                        <p>
-                            Aprenda os fundamentos do VEGAS Pro
-                            começando do zero.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
+                    <a
+                        href="https://pay.kiwify.com.br/QF1Reuz"
+                        target="_blank"
+                        class="button">
+                        Comprar agora
+                    </a>
 
                 </div>
+            </div>
 
 
-                <!-- VEGAS PROFISSIONAL -->
+            <!-- AFTER PROFISSIONAL -->
+            <div class="card">
 
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="Vegas.jpg"
-                            alt="VEGAS Pro Profissional"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            VEGAS Pro Profissional
-                        </h4>
-
-                        <p>
-                            Técnicas avançadas para elevar
-                            o nível das suas edições.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="AfterEffects.jpg" alt="After Effects">
                 </div>
 
+                <div class="card-content">
 
+                    <h3>After Effects Profissional</h3>
+
+                    <p>
+                        Conteúdo avançado para quem quer
+                        evoluir suas edições no After Effects.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a class="button disabled">
+                        Em breve
+                    </a>
+
+                </div>
             </div>
 
         </div>
+    </div>
 
 
-        <!-- =========================================
-             ALIGHT MOTION
-        ========================================== -->
 
-        <div class="category">
+    <!-- ========================================= -->
+    <!-- 3. ALIGHT MOTION -->
+    <!-- ========================================= -->
 
-            <div class="category-title">
+    <div class="category">
 
-                <h3>
-                    Alight Motion
-                </h3>
+        <h2 class="category-title">Alight Motion</h2>
 
-                <div class="category-title-line"></div>
+        <p class="category-subtitle">
+            Guias e presets para edição no Alight Motion.
+        </p>
 
+        <div class="category-line"></div>
+
+        <div class="products">
+
+
+            <!-- ALIGHT BÁSICO -->
+            <div class="card">
+
+                <div class="cover">
+                    <img src="AlightMotion.jpg" alt="Alight Motion">
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Alight Motion Básico</h3>
+
+                    <p>
+                        Aprenda os fundamentos do Alight Motion
+                        e comece a criar suas próprias edições.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a class="button disabled">
+                        Em breve
+                    </a>
+
+                </div>
             </div>
 
 
-            <div class="products">
+            <!-- PRESETS ALIGHT -->
+            <div class="card">
 
-
-                <!-- PRESETS ALIGHT -->
-
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="AlightMotion.jpg"
-                            alt="Presets Alight Motion"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Presets Alight Motion
-                        </h4>
-
-                        <p>
-                            Presets para facilitar e acelerar
-                            suas edições no Alight Motion.
-                        </p>
-
-                        <div class="price">
-                            R$ 9,90
-                        </div>
-
-                        <a
-                            href="https://pay.kiwify.com.br/b07VHJ8"
-                            target="_blank"
-                            class="buy-button"
-                        >
-                            Comprar agora
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="AlightMotion.jpg" alt="Alight Motion">
                 </div>
 
+                <div class="card-content">
 
-                <!-- ALIGHT BÁSICO -->
+                    <h3>Presets Alight Motion</h3>
 
-                <div class="product">
+                    <p>
+                        Pack de presets para acelerar seu processo
+                        de edição no Alight Motion.
+                    </p>
 
-                    <div class="cover">
-
-                        <img
-                            src="AlightMotion.jpg"
-                            alt="Alight Motion Básico"
-                        >
-
+                    <div class="price">
+                        R$ 9,90
                     </div>
 
-                    <div class="product-content">
-
-                        <h4>
-                            Alight Motion Básico
-                        </h4>
-
-                        <p>
-                            Aprenda as principais ferramentas
-                            do Alight Motion desde o início.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
+                    <a
+                        href="https://pay.kiwify.com.br/b07VHJ8"
+                        target="_blank"
+                        class="button">
+                        Comprar agora
+                    </a>
 
                 </div>
+            </div>
 
 
-                <!-- ALIGHT PROFISSIONAL -->
+            <!-- ALIGHT PROFISSIONAL -->
+            <div class="card">
 
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="AlightMotion.jpg"
-                            alt="Alight Motion Profissional"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Alight Motion Profissional
-                        </h4>
-
-                        <p>
-                            Técnicas avançadas para criar
-                            edições mais completas.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="AlightMotion.jpg" alt="Alight Motion">
                 </div>
 
+                <div class="card-content">
 
+                    <h3>Alight Motion Profissional</h3>
+
+                    <p>
+                        Conteúdo avançado para melhorar seus
+                        projetos e técnicas de edição.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a class="button disabled">
+                        Em breve
+                    </a>
+
+                </div>
             </div>
 
         </div>
+    </div>
 
 
-        <!-- =========================================
-             AFTER EFFECTS
-        ========================================== -->
 
-        <div class="category">
+    <!-- ========================================= -->
+    <!-- 4. VEGAS PRO -->
+    <!-- ========================================= -->
 
-            <div class="category-title">
+    <div class="category">
 
-                <h3>
-                    After Effects
-                </h3>
+        <h2 class="category-title">VEGAS Pro</h2>
 
-                <div class="category-title-line"></div>
+        <p class="category-subtitle">
+            Guias e presets para edição profissional no VEGAS Pro.
+        </p>
 
-            </div>
+        <div class="category-line"></div>
 
-
-            <div class="products">
+        <div class="products">
 
 
-                <!-- PRESETS AFTER EFFECTS -->
+            <!-- VEGAS BÁSICO -->
+            <div class="card">
 
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="AfterEffects.jpg"
-                            alt="Presets After Effects"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            Presets After Effects
-                        </h4>
-
-                        <p>
-                            Presets para agilizar seu fluxo
-                            de edição no After Effects.
-                        </p>
-
-                        <div class="price">
-                            R$ 14,90
-                        </div>
-
-                        <a
-                            href="https://pay.kiwify.com.br/QF1Reuz"
-                            target="_blank"
-                            class="buy-button"
-                        >
-                            Comprar agora
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="Vegas.jpg" alt="VEGAS Pro">
                 </div>
 
+                <div class="card-content">
 
-                <!-- AFTER EFFECTS BÁSICO -->
+                    <h3>VEGAS Pro Básico</h3>
 
-                <div class="product">
+                    <p>
+                        Aprenda os fundamentos do VEGAS Pro
+                        e comece a editar seus próprios vídeos.
+                    </p>
 
-                    <div class="cover">
-
-                        <img
-                            src="AfterEffects.jpg"
-                            alt="After Effects Básico"
-                        >
-
+                    <div class="price">
+                        Em breve
                     </div>
 
-                    <div class="product-content">
-
-                        <h4>
-                            After Effects Básico
-                        </h4>
-
-                        <p>
-                            Comece no After Effects aprendendo
-                            suas principais ferramentas.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
+                    <a class="button disabled">
+                        Em breve
+                    </a>
 
                 </div>
+            </div>
 
 
-                <!-- AFTER EFFECTS PROFISSIONAL -->
+            <!-- PRESETS VEGAS -->
+            <div class="card">
 
-                <div class="product">
-
-                    <div class="cover">
-
-                        <img
-                            src="AfterEffects.jpg"
-                            alt="After Effects Profissional"
-                        >
-
-                    </div>
-
-                    <div class="product-content">
-
-                        <h4>
-                            After Effects Profissional
-                        </h4>
-
-                        <p>
-                            Efeitos, técnicas e recursos
-                            para edições mais avançadas.
-                        </p>
-
-                        <div class="price">
-                            Em breve
-                        </div>
-
-                        <a
-                            href="#"
-                            class="buy-button coming-soon"
-                        >
-                            Em breve
-                        </a>
-
-                    </div>
-
+                <div class="cover">
+                    <img src="Vegas.jpg" alt="VEGAS Pro">
                 </div>
 
+                <div class="card-content">
 
-            </div>
+                    <h3>Presets VEGAS Pro</h3>
 
-        </div>
+                    <p>
+                        Presets para facilitar suas edições
+                        e acelerar seu processo de criação.
+                    </p>
 
+                    <div class="price">
+                        R$ 14,90
+                    </div>
 
-    </section>
+                    <a
+                        href="https://pay.kiwify.com.br/GIoEdd6"
+                        target="_blank"
+                        class="button">
+                        Comprar agora
+                    </a>
 
-
-    <!-- =========================
-         SOBRE
-    ========================= -->
-
-    <section id="sobre">
-
-        <div class="about">
-
-            <h2>
-                Tudo em um só lugar
-            </h2>
-
-            <p>
-                A Wesley Edit Store foi criada para reunir
-                produtos digitais voltados para edição de
-                vídeos. A ideia é simples: facilitar seu
-                aprendizado, economizar tempo e ajudar você
-                a criar conteúdos cada vez melhores.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FAQ
-    ========================= -->
-
-    <section id="faq">
-
-        <div class="section-title">
-
-            <h2>
-                Perguntas frequentes
-            </h2>
-
-            <p>
-                Algumas dúvidas comuns.
-            </p>
-
-        </div>
-
-
-        <div class="faq">
-
-
-            <div class="faq-item">
-
-                <h3>
-                    Como recebo o produto?
-                </h3>
-
-                <p>
-                    Após a compra pela Kiwify, você recebe
-                    as instruções de acesso ao produto.
-                </p>
-
+                </div>
             </div>
 
 
-            <div class="faq-item">
+            <!-- VEGAS PROFISSIONAL -->
+            <div class="card">
 
-                <h3>
-                    Posso acessar pelo celular?
-                </h3>
+                <div class="cover">
+                    <img src="Vegas.jpg" alt="VEGAS Pro">
+                </div>
 
-                <p>
-                    Depende do produto. Confira as
-                    informações apresentadas na página
-                    de compra.
-                </p>
+                <div class="card-content">
 
+                    <h3>VEGAS Pro Profissional</h3>
+
+                    <p>
+                        Conteúdo avançado para quem quer
+                        evoluir no VEGAS Pro.
+                    </p>
+
+                    <div class="price">
+                        Em breve
+                    </div>
+
+                    <a class="button disabled">
+                        Em breve
+                    </a>
+
+                </div>
             </div>
-
-
-            <div class="faq-item">
-
-                <h3>
-                    O pagamento é seguro?
-                </h3>
-
-                <p>
-                    Os pagamentos são realizados através
-                    da plataforma Kiwify.
-                </p>
-
-            </div>
-
 
         </div>
+    </div>
 
-    </section>
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
 
-    <footer>
+<!-- SOBRE -->
+<section class="about" id="sobre">
 
-        © 2026 Wesley<span>Edit</span> Store.
-        Todos os direitos reservados.
+    <h2>Sobre a WesleyEdit</h2>
 
-    </footer>
+    <p>
+        A WesleyEdit foi criada para ajudar editores iniciantes
+        e criadores de conteúdo a aprender, evoluir e melhorar
+        seus vídeos através de guias, presets e materiais digitais.
+    </p>
+
+</section>
+
+
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+        <summary>Como recebo meu produto?</summary>
+
+        <p>
+            Após a compra, o acesso é disponibilizado
+            através da Kiwify.
+        </p>
+    </details>
+
+
+    <details>
+        <summary>Os produtos são digitais?</summary>
+
+        <p>
+            Sim. Os produtos são digitais e podem ser acessados
+            após a confirmação da compra.
+        </p>
+    </details>
+
+
+    <details>
+        <summary>Os produtos que estão como "Em breve" já estão disponíveis?</summary>
+
+        <p>
+            Ainda não. Eles serão adicionados à loja
+            quando estiverem disponíveis.
+        </p>
+    </details>
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 WesleyEdit. Todos os direitos reservados.
+
+</footer>
 
 
 </body>
