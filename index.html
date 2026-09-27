@@ -118,7 +118,6 @@
             border: 1px solid #24242e;
             border-radius: 15px;
             overflow: hidden;
-
             transition: 0.25s ease;
         }
 
@@ -168,11 +167,13 @@
             margin: 20px 0;
         }
 
+        /* BOTÕES */
         .button {
             display: block;
             width: 100%;
             padding: 13px;
             border-radius: 9px;
+            border: none;
 
             text-align: center;
             text-decoration: none;
@@ -180,18 +181,15 @@
             background: #7c3cff;
             color: white;
             font-weight: bold;
+            font-size: 14px;
 
+            cursor: pointer;
             transition: 0.2s;
         }
 
         .button:hover {
             background: #925cff;
-        }
-
-        .button.disabled {
-            background: #292933;
-            color: #777;
-            cursor: default;
+            transform: translateY(-1px);
         }
 
         /* SOBRE */
@@ -369,6 +367,7 @@
                     <a
                         href="https://pay.kiwify.com.br/ZIFLRiH"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="button">
                         Comprar agora
                     </a>
@@ -394,12 +393,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 19,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('Guia Básico de Edição')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -428,6 +429,7 @@
                     <a
                         href="https://pay.kiwify.com.br/kAajOBD"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="button">
                         Comprar agora
                     </a>
@@ -474,12 +476,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 19,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('After Effects Básico')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -508,6 +512,7 @@
                     <a
                         href="https://pay.kiwify.com.br/QF1Reuz"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="button">
                         Comprar agora
                     </a>
@@ -533,12 +538,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 39,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('After Effects Profissional')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -582,12 +589,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 19,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('Alight Motion Básico')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -616,6 +625,7 @@
                     <a
                         href="https://pay.kiwify.com.br/b07VHJ8"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="button">
                         Comprar agora
                     </a>
@@ -641,12 +651,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 39,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('Alight Motion Profissional')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -690,12 +702,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 19,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('VEGAS Pro Básico')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -724,6 +738,7 @@
                     <a
                         href="https://pay.kiwify.com.br/GIoEdd6"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="button">
                         Comprar agora
                     </a>
@@ -749,12 +764,14 @@
                     </p>
 
                     <div class="price">
-                        Em breve
+                        R$ 39,90
                     </div>
 
-                    <a class="button disabled">
-                        Em breve
-                    </a>
+                    <button
+                        class="button"
+                        onclick="produtoIndisponivel('VEGAS Pro Profissional')">
+                        Comprar agora
+                    </button>
 
                 </div>
             </div>
@@ -807,11 +824,11 @@
 
 
     <details>
-        <summary>Os produtos que estão como "Em breve" já estão disponíveis?</summary>
+        <summary>Como comprar um produto que ainda não possui link?</summary>
 
         <p>
-            Ainda não. Eles serão adicionados à loja
-            quando estiverem disponíveis.
+            Os produtos que ainda estão sendo preparados terão
+            seu link de compra disponibilizado assim que estiverem prontos.
         </p>
     </details>
 
@@ -826,6 +843,15 @@
 
 </footer>
 
+
+<script>
+    function produtoIndisponivel(nome) {
+        alert(
+            nome +
+            " ainda está sendo preparado. O link de compra será disponibilizado em breve!"
+        );
+    }
+</script>
 
 </body>
 </html>
